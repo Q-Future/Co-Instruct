@@ -1,8 +1,8 @@
 <div align="center">
   <h1>Towards Open-ended Visual Quality Comparison</h1> 
     
-<div style="width: 50%; text-align: center; margin:auto;">
-      <img style="width: 50%" src="teaser.png">
+<div style="width: 80%; text-align: center; margin:auto;">
+      <img style="width: 80%" src="teaser.png">
 </div> 
 </div>
 
