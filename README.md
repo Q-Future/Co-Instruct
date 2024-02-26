@@ -1,8 +1,11 @@
-# Co-Instruct
+<div align="center">
+  <h1>Towards Open-ended Visual Quality Comparison</h1> 
+    
+<div style="width: 50%; text-align: center; margin:auto;">
+      <img style="width: 50%" src="teaser.png">
+</div> 
 
-
-![](teaser.png)
-An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark.
+_An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
 ## Demo
 
