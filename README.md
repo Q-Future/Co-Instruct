@@ -1,7 +1,17 @@
 # Co-Instruct
 
+
+![](teaser.png)
 An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark.
 
+## Demo
+
+<script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/3.50.0/gradio.js"
+></script>
+
+<gradio-app src="https://q-future-co-instruct.hf.space"></gradio-app>
 
 ## News
 
