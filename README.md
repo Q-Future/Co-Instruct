@@ -1,4 +1,8 @@
 <div align="center">
+
+ <div style="width: 80%; text-align: center; margin:auto;">
+      <img style="width: 80%" src="co-instruct.png">
+</div> 
   <h1>Towards Open-ended Visual Quality Comparison</h1> 
     
 <div style="width: 80%; text-align: center; margin:auto;">
