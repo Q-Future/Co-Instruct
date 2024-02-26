@@ -4,6 +4,7 @@
 <div style="width: 50%; text-align: center; margin:auto;">
       <img style="width: 50%" src="teaser.png">
 </div> 
+</div>
 
 _An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
