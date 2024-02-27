@@ -12,6 +12,8 @@
 
 _An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
+**Please visit our [website](https://co-instruct.github.io/)!**
+
 ## Demo
 
 <script
@@ -25,7 +27,9 @@ _An study on open-ended multi-image quality comparison: a dataset, a model and a
 
 [Feb 24, 2024] A technical report for the data and model is coming soon.
 
-## Load Model
+## Quick Start
+
+### Load Model
 
 ```python
 import torch
@@ -38,7 +42,7 @@ model = AutoModelForCausalLM.from_pretrained("q-future/co-instruct",
                                              device_map={"":"cuda:0"})
 ```
 
-## Chat
+### Chat
 
 ```python
 import requests
@@ -61,4 +65,25 @@ model.chat(prompt_cmp, [image, image_2], max_new_tokens=200)
 
 ## The second image has better quality. The description indicates that the image has accurate exposure, precise focus, clear details, rich colors, and sufficient lighting. Additionally, the texture details are clear, and the composition is centered. In comparison, the first image has good clarity and rich texture details, but the lighting is slightly weak, which can affect the overall quality of the image. Therefore, the second image is of higher quality due to its accurate exposure, precise focus, clear details, rich colors, sufficient lighting, and centered composition.
 
+```
+
+## Data Release
+
+Coming soon.
+
+## Training Scripts
+
+Coming soon.
+
+## Cite Us
+
+```bibtex
+@misc{wu2024openended,
+      title={Towards Open-ended Visual Quality Comparison}, 
+      author={Haoning Wu and Hanwei Zhu and Zicheng Zhang and Erli Zhang and Chaofeng Chen and Liang Liao and Chunyi Li and Annan Wang and Wenxiu Sun and Qiong Yan and Xiaohong Liu and Guangtao Zhai and Shiqi Wang and Weisi Lin},
+      year={2024},
+      eprint={2402.16641},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
