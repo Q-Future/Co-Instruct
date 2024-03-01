@@ -8,8 +8,27 @@
 <div>
    <a href="https://HuggingFace.co/q-future/co-instruct"><strong>HF AutoModel</strong></a> | <a href="https://huggingface.co/datasets/q-future/Co-Instruct-DB"><strong>Data Release</strong></a> |  <a href="https://arxiv.org/pdf/2402.16641.pdf"><strong>Technical Report</strong></a> | <a href="https://co-instruct.github.io/"><strong>Homepage</strong></a> | <a href="https://q-future-co-instruct.hf.space/"><strong>HF Space (Demo)</strong></a>
    </div>   
+    <div>
+  <a href="https://teowu.github.io" target="_blank">Haoning Wu</a><sup>1*</sup>,
+  <a href="https://github.com/h4nwei" target="_blank">Hanwei Zhu</a><sup>2*</sup>,
+  <a href="https://github.com/zzc-1998" target="_blank">Zicheng Zhang</a><sup>3*</sup>,
+  <a href="https://github.com/ZhangErliCarl/" target="_blank">Erli Zhang</a><sup>1</sup>,
+  <a href="https://chaofengc.github.io" target="_blank">Chaofeng Chen</a><sup>1</sup>,
+  <a href="https://liaoliang92.github.io" target="_blank">Liang Liao</a><sup>1</sup>,
+  <a href="https://github.com/lcysyzxdxc" target="_blank">Chunyi Li</a><sup>3</sup>,
+  <a href="https://github.com/AnnanWangDaniel" target="_blank">Annan Wang</a><sup>1</sup>
+    </div>
+    <div>
+  <a href="https://wenxiusun.com" target="_blank">Wenxiu Sun</a><sup>4</sup>,
+  <a href="https://scholar.google.com/citations?user=uT9CtPYAAAAJ&hl=en" target="_blank">Qiong Yan</a><sup>4</sup>,
+  <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/" target="_blank">Xiaohong Liu</a><sup>3</sup>,
+  <a href="https://ee.sjtu.edu.cn/en/FacultyDetail.aspx?id=24&infoid=153&flag=153" target="_blank">Guangtao Zhai</a><sup>3</sup>,
+  <a href="https://www.cs.cityu.edu.hk/~shiqwang/" target="_blank">Shiqi Wang</a><sup>2</sup>,
+  <a href="https://personal.ntu.edu.sg/wslin/Home.html" target="_blank">Weisi Lin</a><sup>1</sup>
+    </div>
     
-
+  <sup>*</sup>Equal contribution.
+</div>
     
 <div style="width: 80%; text-align: center; margin:auto;">
       <img style="width: 80%" src="teaser.png">
