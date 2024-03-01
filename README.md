@@ -18,10 +18,10 @@
   <a href="https://github.com/ZhangErliCarl/" target="_blank">Erli Zhang</a><sup>1</sup>,
   <a href="https://chaofengc.github.io" target="_blank">Chaofeng Chen</a><sup>1</sup>,
   <a href="https://liaoliang92.github.io" target="_blank">Liang Liao</a><sup>1</sup>,
-  <a href="https://github.com/lcysyzxdxc" target="_blank">Chunyi Li</a><sup>3</sup>,
-  <a href="https://github.com/AnnanWangDaniel" target="_blank">Annan Wang</a><sup>1</sup>
+  <a href="https://github.com/lcysyzxdxc" target="_blank">Chunyi Li</a><sup>3</sup>
 </div>
 <div>
+  <a href="https://github.com/AnnanWangDaniel" target="_blank">Annan Wang</a><sup>1</sup>,
   <a href="https://wenxiusun.com" target="_blank">Wenxiu Sun</a><sup>4</sup>,
   <a href="https://scholar.google.com/citations?user=uT9CtPYAAAAJ&hl=en" target="_blank">Qiong Yan</a><sup>4</sup>,
   <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/" target="_blank">Xiaohong Liu</a><sup>3</sup>,
@@ -31,7 +31,7 @@
     </div>
     
   <sup>*</sup>Equal contribution.
-</div>
+
     
 <div style="width: 80%; text-align: center; margin:auto;">
       <img style="width: 80%" src="teaser.png">
@@ -42,6 +42,8 @@ _An study on open-ended multi-image quality comparison: a dataset, a model and a
 
 
 ## Demo
+
+<a href="https://q-future-co-instruct.hf.space/"><img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm-dark.svg" alt="Open in Huggingface Spaces"></a>
 
 <script
 	type="module"
