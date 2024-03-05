@@ -38,7 +38,7 @@
 </div> 
 </div>
 
-_An study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
+_A study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
 
 ## Demo
