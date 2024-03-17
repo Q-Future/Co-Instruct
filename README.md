@@ -98,11 +98,11 @@ model.chat(prompt_cmp, [image, image_2], max_new_tokens=200)
 
 ## Data Release
 
-Coming soon.
+Coming soon...
 
 ## Training Scripts
 
-Coming soon.
+Coming soon...
 
 ## Cite Us
 
