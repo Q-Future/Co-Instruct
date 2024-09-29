@@ -132,6 +132,8 @@ For training, please refer to the [Q-Align](https://github.com/Q-Future/Q-Align)
 
 ```shell
 #!/bin/bash
+# Use 8 GPUs to replicate the training
+
 LOAD='MAGAer13/mplug-owl2-llama2-7b'
 
 echo 'Converting data format...'
@@ -149,11 +151,11 @@ deepspeed --master_port 25801 q_align/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir ./qinstruct_v0.3 \
+    --output_dir ./coinstruct_replicated \
     --num_train_epochs 1 \
     --per_device_train_batch_size 24 \
     --per_device_eval_batch_size 4 \
-    --gradient_accumulation_steps 2 \
+    --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 1100 \
