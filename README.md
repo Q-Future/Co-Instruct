@@ -31,7 +31,12 @@
   <a href="https://personal.ntu.edu.sg/wslin/Home.html" target="_blank">Weisi Lin</a><sup>1</sup>
     </div>
     
+  <div>
   <sup>*</sup>Equal contribution.
+</div>
+<div>
+  ECCV2024 (Oral)
+  </div>
 
     
 <div style="width: 80%; text-align: center; margin:auto;">
@@ -41,7 +46,7 @@
 
 _A study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
-ECCV2024 (Oral)
+
 
 ## Demo
 
@@ -137,7 +142,7 @@ For training, please refer to the [Q-Align](https://github.com/Q-Future/Q-Align)
 LOAD='MAGAer13/mplug-owl2-llama2-7b'
 
 echo 'Converting data format...'
-sed 's/"<image>"/"<|image|>"/g' Co-Instruct-DB/coinstruct_562k_llava_format.json > Co-Instruct-DB/coinstruct_562k_mplugowl2_format.json
+sed 's/<image>/<|image|>/g' Co-Instruct-DB/coinstruct_562k_llava_format.json > Co-Instruct-DB/coinstruct_562k_mplugowl2_format.json
 
 echo 'Start training!'
 
