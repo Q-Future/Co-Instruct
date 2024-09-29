@@ -9,6 +9,7 @@
 </div> 
 <div>
   <h1>Towards Open-ended Visual Quality Comparison</h1> 
+
 </div>
   
 <div>
@@ -40,6 +41,7 @@
 
 _A study on open-ended multi-image quality comparison: a dataset, a model and a benchmark._
 
+ECCV2024 (Oral)
 
 ## Demo
 
@@ -52,11 +54,19 @@ _A study on open-ended multi-image quality comparison: a dataset, a model and a 
 
 <gradio-app src="https://q-future-co-instruct.hf.space"></gradio-app>
 
-## News
+## [Recommended] General LMMs with Co-Instruct Abilities
 
-[Feb 24, 2024] A technical report for the data and model is coming soon.
+Several general-purpose open-source LMMs have integrated Co-Instruct into their training, which has as good visual quality comparison abilities while retaining as good general abilities. Please find thme as follows:
 
-## Quick Start
+- [LLaVA-OneVision](https://huggingface.co/lmms-lab/llava-onevision-qwen2-72b-ov-sft)
+- [mPLUG-OWl3](https://huggingface.co/mPLUG/mPLUG-Owl3-7B-240728)
+- [Mantis](https://huggingface.co/TIGER-Lab/Mantis-8B-Idefics2)
+
+We thank the authors of these projects to include our data into their training. Please try to use these models if you need a strong general-purpose LMM with decent open-ended visual quality comparison abilities.
+
+## Model Inference
+
+Quick Note: Please use `transformers==4.36` or ``transformers==4.37` to seamlessly run on 
 
 ### Load Model
 
@@ -98,11 +108,70 @@ model.chat(prompt_cmp, [image, image_2], max_new_tokens=200)
 
 ## Data Release
 
-Coming soon...
+We have relesed the training data on HuggingFace datasets on LLaVA format.
 
-## Training Scripts
+Please find on the link: https://huggingface.co/datasets/q-future/Co-Instruct-DB or use as follows:
 
-Coming soon...
+```shell
+huggingface-cli download q-future/Co-Instruct-DB --local-dir Co-Instruct-DB --repo-type datasets
+tar -xf co-insruct-imageds.tar
+```
+
+The extracted data will look as follows:
+```
+-- Co-Instruct-DB/
+-- -- coinstruct_562k_llava_format.json
+-- -- data/
+```
+
+The data in the JSON contains 562K dicts, each corresponding to a piece of SFT data item. 
+
+## Training Recipe
+
+For training, please refer to the [Q-Align](https://github.com/Q-Future/Q-Align) codebase, which is a modified version of mPLUG-Owl2 that supports multi-image training. Please use the following script for training:
+
+```shell
+#!/bin/bash
+LOAD='MAGAer13/mplug-owl2-llama2-7b'
+
+echo 'Converting data format...'
+sed 's/"<image>"/"<|image|>"/g' Co-Instruct-DB/coinstruct_562k_llava_format.json > Co-Instruct-DB/coinstruct_562k_mplugowl2_format.json
+
+echo 'Start training!'
+
+DATA_FILE=Co-Instruct-DB/coinstruct_562k_mplugowl2_format.json
+deepspeed --master_port 25801 q_align/train/train_mem.py \
+    --deepspeed ./scripts/zero3.json \
+    --model_name_or_path $LOAD \
+    --version v1 \
+    --data_path $DATA_FILE \
+    --image_folder Co-Instruct-DB/ \
+    --image_aspect_ratio pad \
+    --group_by_modality_length True \
+    --bf16 True \
+    --output_dir ./qinstruct_v0.3 \
+    --num_train_epochs 1 \
+    --per_device_train_batch_size 24 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 2 \
+    --evaluation_strategy "no" \
+    --save_strategy "steps" \
+    --save_steps 1100 \
+    --save_total_limit 2 \
+    --learning_rate 2e-5 \
+    --weight_decay 0. \
+    --warmup_ratio 0.03 \
+    --lr_scheduler_type "cosine" \
+    --logging_steps 1 \
+    --tf32 True \
+    --model_max_length 2048 \
+    --gradient_checkpointing True \
+    --tune_visual_abstractor True \
+    --freeze_vision_model False \
+    --dataloader_num_workers 4 \
+    --lazy_preprocess True \
+    --report_to wandb
+```
 
 ## Cite Us
 
