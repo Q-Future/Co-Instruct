@@ -131,6 +131,8 @@ The extracted data will look as follows:
 
 The data in the JSON contains 562K dicts, each corresponding to a piece of SFT data item. 
 
+For MICBench, our team notices that there are some cases with NSFW contents, and we may need to distribute it after making sure it is only used for research purpose. Please email `haoning001@e.ntu.edu.sg` to obtain it.
+
 ## Training Recipe
 
 For training, please refer to the [Q-Align](https://github.com/Q-Future/Q-Align) codebase, which is a modified version of mPLUG-Owl2 that supports multi-image training. Please use the following script for training:
